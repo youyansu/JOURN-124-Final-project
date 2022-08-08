@@ -1,7 +1,7 @@
 # Journalist and media worker deaths since 1992
 ## By Yansu Tan
 ## Summary
-My dataset
+My data analysis has shown three interest
 ## Source
 My data of journalists and media workers killed since 1992 comes from [Committee to Protect Journalists (CPJ)](https://cpj.org/data/). [CPJ](https://cpj.org/about/) is an independent non-profit that defends press freedom and supports the rights of journalists worldwide.
 ### [Methodology](https://cpj.org/data-methodology/)
@@ -59,7 +59,14 @@ From this map, we can see that there are actually very few countries that are ex
 
  * An overwhelming majority of cases have received complete impunity, with the anomalies being 2009 and 2015, when the number of cases that received partial impunity surged. There was a significant increase in cases that received full impunity in these years too. Notably, almost all cases after the pandemic have received complete impunity. 
 
-5. What percentage of 
+5. What types of death occured the most in the countries with most deaths?
+I created a pivot table with "country" in row, "type of death" in column, and "full name" in value, summarized by COUNTA. I filtered out countries to keep the top ten countries with the most deaths (which was obtained in the answer to question 1).
+
+Then I used the data in the table to create the [cluster bar chart](https://www.datawrapper.de/_/S4OSk/).
+
+![S4OSk-journalism-deaths-in-top-10-countries-with-deaths](https://user-images.githubusercontent.com/109619753/183427851-b58e71c6-2afc-459e-af26-894cf9fd5382.png)
+
+From the bar chart, we can see that the number of journalism deaths can be reflected in the situation of the country. Not all journalism deaths are the result of direct war zone conflict. For instance, the Philippines do not have a major ongoing war, and this is reflected in the number of deaths caused by murder, and none by crossfire. Backed by the Filipino congress, the Filipino president, Rodrigo Duterte, has launched countless verbal attacks and judicial harrassment targeting any media that is deemed to critical of the government. In 2020, dozens of radio stations and TV channels closed paritially due to the political situation.
 
 
 
