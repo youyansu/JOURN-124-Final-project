@@ -31,20 +31,33 @@ A few key things that are important in our data analysis:
 
 ![Y4tO7-journalist-and-media-worker-deaths-since-1992](https://user-images.githubusercontent.com/109619753/183368621-556c0456-1d95-4e0c-9f91-5b99374acc67.png)
 
-2. How does the number of journalist deaths relate to the freedom of press of the country they were reporting on in the year they died?
- * If we were to answer this question using the Press Freedom Index, the major problem in answering this question with graphs is the fact that there are four variables involved: year, country, number of deaths, and PFI, since the PFI varies depending on year for each country. Hence, I specifically looked at the three countries with the most number of deaths. 
- 
-3. Is there a historical trend? What differs from reporting today compared to 30 years ago?
+From this map, we can see that there are actually very few countries that are exempt from this list. Most journalism deaths occur in the middle east, in central and south America, and in the Indian subcontinent. Countries that have the most journalist deaths are: Iraq (283), Syria (154), the Philippines (153), Mexico (149), and Pakistan (96).
+
+2. Is there a historical trend? What differs from reporting today compared to 30 years ago?
 To answer this question, I wanted to also show the type of journalist, i.e. freelancer, staff reporter, or media worker. To combine the columns "type" and "employedAs", I used the IF function to create a new column "type of journalist". In AP2, enter the function =IF(I2="Journalist",M2,I2), then select autofill.
 Next, create a pivot table with the row as "year", column as "type of journalist", and value as "full name", summarized by "COUNTA".
 <img width="552" alt="Screenshot 2022-08-08 at 2 51 49 AM" src="https://user-images.githubusercontent.com/109619753/183390959-809876fb-06da-4965-972c-bc4dcde694f5.png">
-Enter this data into datawrapper to create the [following chart](https://www.datawrapper.de/_/wdnjy/).
 
-![journalist-and-media-worker-deaths-by-job-type-since-1992](https://user-images.githubusercontent.com/109619753/183393820-49230ab5-8964-4033-9c7a-29f7b1729eea.png)
+Enter this data into datawrapper to create [chart](https://www.datawrapper.de/_/wdnjy/).
 
-4. Does the gender of the journalist play a role?
+![wdnjy-journalist-and-media-worker-deaths-by-job-type-since-1992](https://user-images.githubusercontent.com/109619753/183418017-5bf919ae-9bd4-4c74-b2e7-f8b663ee92db.png)
 
-5. What percentage of cases has been given due justice?
+There has been more deaths occurring in the 2010s, with also a peak in 2006 ad 2007, perhaps due to increased U.S. involvement in the Iraqi war, which would attract more reporters. We also saw a lot of media worker deaths in those two years. From 2019 onwards, there is a sharp fall in the number of deaths, most potentially due to COVID. 
+
+3. What does the gender distribution look like?
+I created a pivot table with "gender" as row and "full name" as value, summarized by COUNTA. While 579 entries were missing gender data, there were 116 recorded female journalists killed and 1468 male journalists killed. The ratio is 12.66, male to female. 
+
+<img width="391" alt="Screenshot 2022-08-08 at 4 44 52 AM" src="https://user-images.githubusercontent.com/109619753/183410726-2263e676-99cf-49a2-a2f2-5dcdcd083ba2.png">
+
+Most journalists killed were men. However, this may not necessary mean that female journalists are less targeted than male journalists. We would need to verify if that is true by comparing the numbers to the total number of male and female journalist reporters in war zones or countries with tight censorship. This is because there might be more male journalists covering war zones, perhaps because news organizations tend to prefer hiring male journalists as staff reporters for war zones. 
+
+4. What percentage of cases has been given due justice?
+ * I created a pivot table with year in "row", "impunity murder" in column, and "full name" in value, summarized by "COUNTA". Then I used the data to create the following [chart](https://www.datawrapper.de/_/nYE1z/).
+
+![nYE1z-impunity-in-journalist-deaths-cases-since-1992](https://user-images.githubusercontent.com/109619753/183418069-644f7593-b1a4-47fe-b471-e4b4a7222323.png)
+
+The majority of 
+5. What percentage of 
 
 
 
