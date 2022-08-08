@@ -14,8 +14,9 @@ A few key things that are important in our data analysis:
 4. CPJ constantly monitors the judicial process for each confirmed murder case. There are three categories of impuntiy: "complete impunity" (no convictions have been obtained), "partial justice" (some but not all of those responsible have been convicted; typically, assassins are convicted but not those who ordered the killing), and "full justice" (everyone responsible is convicted, including perpetrators and those who commissioned them).
 5. This data excludes the more than sixty journalists currently missing. CPJ categorizes cases as "missing" if the boy of the reporter is not found.
 ### Additional source: 
-1. Press Freedom Index, compiled by Reporters Without Borders (RSF)](https://rsf.org/en/index): The press freedom index is a snapshot of the level of press freedom experienced by journalists and media in 180 countries and territories each year, based on the definition of "press freedom" by RSF. PFI ranges from 0-100, with 0 being the least amount of press freedom and 100 the most. According to RSF, "This score is calculated on the basis of two components: a quantitative tally of abuses against journalists in connection with their work, and against media outlets; a qualitative analysis of the situation in each country or territory based on the responses of press freedom specialists (including journalists, researchers, academics and human rights defenders) to an RSF questionnaire available in 23 languages." Read more about the [methodology](https://rsf.org/en/index-methodologie-2022?year=2022&data_type=general) here.
-2. [Corruptions Perceptions Index](https://www.transparency.org/en/cpi/2021): This is an index by Transparency.org to gauge the 
+1. Press Freedom Index, compiled by Reporters Without Borders [(RSF)](https://rsf.org/en/index): The press freedom index is a snapshot of the level of press freedom experienced by journalists and media in 180 countries and territories each year, based on the definition of "press freedom" by RSF. PFI ranges from 0-100, with 0 being the least amount of press freedom and 100 the most. According to RSF, "This score is calculated on the basis of two components: a quantitative tally of abuses against journalists in connection with their work, and against media outlets; a qualitative analysis of the situation in each country or territory based on the responses of press freedom specialists (including journalists, researchers, academics and human rights defenders) to an RSF questionnaire available in 23 languages." Read more about the [methodology](https://rsf.org/en/index-methodologie-2022?year=2022&data_type=general) here.
+2. [Corruptions Perceptions Index](https://www.transparency.org/en/cpi/2021): This is an index by Transparency.org to gauge the corruption levels worldwide. It would be interesting to see if journalism deaths correlate to corruption of the government in the countries where deaths occur. 
+
 ### Potential interview sources
 1. Chrissy Heckart
  * chrissy@risctraining.org
@@ -34,29 +35,30 @@ A few key things that are important in our data analysis:
 From this map, we can see that there are actually very few countries that are exempt from this list. Most journalism deaths occur in the middle east, in central and south America, and in the Indian subcontinent. Countries that have the most journalist deaths are: Iraq (283), Syria (154), the Philippines (153), Mexico (149), and Pakistan (96).
 
 2. Is there a historical trend? What differs from reporting today compared to 30 years ago?
-To answer this question, I wanted to also show the type of journalist, i.e. freelancer, staff reporter, or media worker. To combine the columns "type" and "employedAs", I used the IF function to create a new column "type of journalist". In AP2, enter the function =IF(I2="Journalist",M2,I2), then select autofill.
-Next, create a pivot table with the row as "year", column as "type of journalist", and value as "full name", summarized by "COUNTA".
+ * To answer this question, I wanted to also show the type of journalist, i.e. freelancer, staff reporter, or media worker. To combine the columns "type" and "employedAs", I used the IF function to create a new column "type of journalist". In AP2, enter the function =IF(I2="Journalist",M2,I2), then select autofill.
+ * Next, create a pivot table with the row as "year", column as "type of journalist", and value as "full name", summarized by "COUNTA".
 <img width="552" alt="Screenshot 2022-08-08 at 2 51 49 AM" src="https://user-images.githubusercontent.com/109619753/183390959-809876fb-06da-4965-972c-bc4dcde694f5.png">
 
-Enter this data into datawrapper to create [chart](https://www.datawrapper.de/_/wdnjy/).
+ * Enter this data into datawrapper to create [chart](https://www.datawrapper.de/_/wdnjy/).
 
 ![wdnjy-journalist-and-media-worker-deaths-by-job-type-since-1992](https://user-images.githubusercontent.com/109619753/183418017-5bf919ae-9bd4-4c74-b2e7-f8b663ee92db.png)
 
-There has been more deaths occurring in the 2010s, with also a peak in 2006 ad 2007, perhaps due to increased U.S. involvement in the Iraqi war, which would attract more reporters. We also saw a lot of media worker deaths in those two years. From 2019 onwards, there is a sharp fall in the number of deaths, most potentially due to COVID. 
+ * There has been more deaths occurring in the 2010s, with also a peak in 2006 ad 2007, perhaps due to increased U.S. involvement in the Iraqi war, which would attract more reporters. We also saw a lot of media worker deaths in those two years. From 2019 onwards, there is a sharp fall in the number of deaths, most potentially due to COVID. 
 
 3. What does the gender distribution look like?
-I created a pivot table with "gender" as row and "full name" as value, summarized by COUNTA. While 579 entries were missing gender data, there were 116 recorded female journalists killed and 1468 male journalists killed. The ratio is 12.66, male to female. 
+ * I created a pivot table with "gender" as row and "full name" as value, summarized by COUNTA. While 579 entries were missing gender data, there were 116 recorded female journalists killed and 1468 male journalists killed. The ratio is 12.66, male to female. 
 
 <img width="391" alt="Screenshot 2022-08-08 at 4 44 52 AM" src="https://user-images.githubusercontent.com/109619753/183410726-2263e676-99cf-49a2-a2f2-5dcdcd083ba2.png">
 
-Most journalists killed were men. However, this may not necessary mean that female journalists are less targeted than male journalists. We would need to verify if that is true by comparing the numbers to the total number of male and female journalist reporters in war zones or countries with tight censorship. This is because there might be more male journalists covering war zones, perhaps because news organizations tend to prefer hiring male journalists as staff reporters for war zones. 
+ * Most journalists killed were men. However, this may not necessary mean that female journalists are less targeted than male journalists. We would need to verify if that is true by comparing the numbers to the total number of male and female journalist reporters in war zones or countries with tight censorship. This is because there might be more male journalists covering war zones, perhaps because news organizations tend to prefer hiring male journalists as staff reporters for war zones. 
 
 4. What percentage of cases has been given due justice?
  * I created a pivot table with year in "row", "impunity murder" in column, and "full name" in value, summarized by "COUNTA". Then I used the data to create the following [chart](https://www.datawrapper.de/_/nYE1z/).
 
 ![nYE1z-impunity-in-journalist-deaths-cases-since-1992](https://user-images.githubusercontent.com/109619753/183418069-644f7593-b1a4-47fe-b471-e4b4a7222323.png)
 
-The majority of 
+ * An overwhelming majority of cases have received complete impunity, with the anomalies being 2009 and 2015, when the number of cases that received partial impunity surged. There was a significant increase in cases that received full impunity in these years too. Notably, almost all cases after the pandemic have received complete impunity. 
+
 5. What percentage of 
 
 
